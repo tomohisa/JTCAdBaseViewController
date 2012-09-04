@@ -58,7 +58,7 @@ just responds with shouldAutorotateToInterfaceOrientation in subclass of JTCAdBa
 
 ![With Ads](https://dl.dropbox.com/u/1157820/JTCAdBaseViewController/withAds.png)
 ![Without Ads](https://dl.dropbox.com/u/1157820/JTCAdBaseViewController/withoutAds.png)
-
+[see sample on Youtube](http://www.youtube.com/watch?v=axE8ckFovRc&feature=youtube_gdata_player)
 ## License
 The MIT License (MIT)
 Copyright (c) 2012 2012 Tomohisa Takaoka, J-Tech Creations, Inc.
