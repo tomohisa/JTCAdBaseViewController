@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		018AE62F15F69B40003500DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE62E15F69B40003500DB /* UIKit.framework */; };
+		018AE63115F69B40003500DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE63015F69B40003500DB /* Foundation.framework */; };
+		018AE63315F69B40003500DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE63215F69B40003500DB /* CoreGraphics.framework */; };
+		018AE63915F69B40003500DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 018AE63715F69B40003500DB /* InfoPlist.strings */; };
+		018AE63B15F69B40003500DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AE63A15F69B40003500DB /* main.m */; };
+		018AE63F15F69B40003500DB /* TNCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AE63E15F69B40003500DB /* TNCAppDelegate.m */; };
+		018AE64215F69B40003500DB /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018AE64015F69B40003500DB /* MainStoryboard_iPhone.storyboard */; };
+		018AE64515F69B40003500DB /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018AE64315F69B40003500DB /* MainStoryboard_iPad.storyboard */; };
+		018AE64815F69B40003500DB /* TNCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AE64715F69B40003500DB /* TNCViewController.m */; };
+		018AE65115F69B62003500DB /* JTCAdBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AE65015F69B62003500DB /* JTCAdBaseViewController.m */; };
+		018AE6ED15F69BFD003500DB /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE6B815F69BFD003500DB /* libGoogleAdMobAds.a */; };
+		018AE6EE15F69BFD003500DB /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 018AE6B915F69BFD003500DB /* README.txt */; };
+		018AE6F415F69C45003500DB /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE6F315F69C45003500DB /* iAd.framework */; };
+		018AE6F615F69C4C003500DB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE6F515F69C4C003500DB /* AudioToolbox.framework */; };
+		018AE6F815F69C57003500DB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE6F715F69C57003500DB /* MessageUI.framework */; };
+		018AE6FA15F69C60003500DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE6F915F69C60003500DB /* SystemConfiguration.framework */; };
+		018AE71615F69E39003500DB /* TNCAdBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AE71515F69E39003500DB /* TNCAdBaseViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		018AE62A15F69B40003500DB /* JTCAdBaseViewControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTCAdBaseViewControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		018AE62E15F69B40003500DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		018AE63015F69B40003500DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		018AE63215F69B40003500DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		018AE63615F69B40003500DB /* JTCAdBaseViewControllerSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JTCAdBaseViewControllerSample-Info.plist"; sourceTree = "<group>"; };
+		018AE63815F69B40003500DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		018AE63A15F69B40003500DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		018AE63C15F69B40003500DB /* JTCAdBaseViewControllerSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JTCAdBaseViewControllerSample-Prefix.pch"; sourceTree = "<group>"; };
+		018AE63D15F69B40003500DB /* TNCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCAppDelegate.h; sourceTree = "<group>"; };
+		018AE63E15F69B40003500DB /* TNCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNCAppDelegate.m; sourceTree = "<group>"; };
+		018AE64115F69B40003500DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		018AE64415F69B40003500DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		018AE64615F69B40003500DB /* TNCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCViewController.h; sourceTree = "<group>"; };
+		018AE64715F69B40003500DB /* TNCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNCViewController.m; sourceTree = "<group>"; };
+		018AE64F15F69B62003500DB /* JTCAdBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCAdBaseViewController.h; sourceTree = "<group>"; };
+		018AE65015F69B62003500DB /* JTCAdBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCAdBaseViewController.m; sourceTree = "<group>"; };
+		018AE6AF15F69BFD003500DB /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		018AE6B015F69BFD003500DB /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		018AE6B115F69BFD003500DB /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		018AE6B215F69BFD003500DB /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		018AE6B315F69BFD003500DB /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		018AE6B415F69BFD003500DB /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		018AE6B515F69BFD003500DB /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		018AE6B615F69BFD003500DB /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		018AE6B715F69BFD003500DB /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		018AE6B815F69BFD003500DB /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		018AE6B915F69BFD003500DB /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		018AE6F315F69C45003500DB /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		018AE6F515F69C4C003500DB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		018AE6F715F69C57003500DB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		018AE6F915F69C60003500DB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		018AE71415F69E39003500DB /* TNCAdBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCAdBaseViewController.h; sourceTree = "<group>"; };
+		018AE71515F69E39003500DB /* TNCAdBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCAdBaseViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		018AE62715F69B40003500DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				018AE63315F69B40003500DB /* CoreGraphics.framework in Frameworks */,
+				018AE6FA15F69C60003500DB /* SystemConfiguration.framework in Frameworks */,
+				018AE6F815F69C57003500DB /* MessageUI.framework in Frameworks */,
+				018AE6F615F69C4C003500DB /* AudioToolbox.framework in Frameworks */,
+				018AE6F415F69C45003500DB /* iAd.framework in Frameworks */,
+				018AE62F15F69B40003500DB /* UIKit.framework in Frameworks */,
+				018AE63115F69B40003500DB /* Foundation.framework in Frameworks */,
+				018AE6ED15F69BFD003500DB /* libGoogleAdMobAds.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		018AE61F15F69B40003500DB = {
+			isa = PBXGroup;
+			children = (
+				018AE6F915F69C60003500DB /* SystemConfiguration.framework */,
+				018AE6F715F69C57003500DB /* MessageUI.framework */,
+				018AE6F515F69C4C003500DB /* AudioToolbox.framework */,
+				018AE6F315F69C45003500DB /* iAd.framework */,
+				018AE63415F69B40003500DB /* JTCAdBaseViewControllerSample */,
+				018AE62D15F69B40003500DB /* Frameworks */,
+				018AE62B15F69B40003500DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		018AE62B15F69B40003500DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				018AE62A15F69B40003500DB /* JTCAdBaseViewControllerSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		018AE62D15F69B40003500DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				018AE62E15F69B40003500DB /* UIKit.framework */,
+				018AE63015F69B40003500DB /* Foundation.framework */,
+				018AE63215F69B40003500DB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		018AE63415F69B40003500DB /* JTCAdBaseViewControllerSample */ = {
+			isa = PBXGroup;
+			children = (
+				018AE65615F69BFD003500DB /* GoogleAdMobAdsSdkiOS-6.1.5 */,
+				018AE64E15F69B62003500DB /* JTCAdBaseViewController */,
+				018AE63D15F69B40003500DB /* TNCAppDelegate.h */,
+				018AE63E15F69B40003500DB /* TNCAppDelegate.m */,
+				018AE64015F69B40003500DB /* MainStoryboard_iPhone.storyboard */,
+				018AE64315F69B40003500DB /* MainStoryboard_iPad.storyboard */,
+				018AE64615F69B40003500DB /* TNCViewController.h */,
+				018AE64715F69B40003500DB /* TNCViewController.m */,
+				018AE63515F69B40003500DB /* Supporting Files */,
+				018AE71415F69E39003500DB /* TNCAdBaseViewController.h */,
+				018AE71515F69E39003500DB /* TNCAdBaseViewController.m */,
+			);
+			path = JTCAdBaseViewControllerSample;
+			sourceTree = "<group>";
+		};
+		018AE63515F69B40003500DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				018AE63615F69B40003500DB /* JTCAdBaseViewControllerSample-Info.plist */,
+				018AE63715F69B40003500DB /* InfoPlist.strings */,
+				018AE63A15F69B40003500DB /* main.m */,
+				018AE63C15F69B40003500DB /* JTCAdBaseViewControllerSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		018AE64E15F69B62003500DB /* JTCAdBaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				018AE64F15F69B62003500DB /* JTCAdBaseViewController.h */,
+				018AE65015F69B62003500DB /* JTCAdBaseViewController.m */,
+			);
+			name = JTCAdBaseViewController;
+			path = ../../../JTCAdBaseViewController;
+			sourceTree = "<group>";
+		};
+		018AE65615F69BFD003500DB /* GoogleAdMobAdsSdkiOS-6.1.5 */ = {
+			isa = PBXGroup;
+			children = (
+				018AE6AF15F69BFD003500DB /* GADAdMobExtras.h */,
+				018AE6B015F69BFD003500DB /* GADAdNetworkExtras.h */,
+				018AE6B115F69BFD003500DB /* GADAdSize.h */,
+				018AE6B215F69BFD003500DB /* GADBannerView.h */,
+				018AE6B315F69BFD003500DB /* GADBannerViewDelegate.h */,
+				018AE6B415F69BFD003500DB /* GADInterstitial.h */,
+				018AE6B515F69BFD003500DB /* GADInterstitialDelegate.h */,
+				018AE6B615F69BFD003500DB /* GADRequest.h */,
+				018AE6B715F69BFD003500DB /* GADRequestError.h */,
+				018AE6B815F69BFD003500DB /* libGoogleAdMobAds.a */,
+				018AE6B915F69BFD003500DB /* README.txt */,
+			);
+			name = "GoogleAdMobAdsSdkiOS-6.1.5";
+			path = "../../GoogleAdMobAdsSdkiOS-6.1.5";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		018AE62915F69B40003500DB /* JTCAdBaseViewControllerSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 018AE64B15F69B40003500DB /* Build configuration list for PBXNativeTarget "JTCAdBaseViewControllerSample" */;
+			buildPhases = (
+				018AE62615F69B40003500DB /* Sources */,
+				018AE62715F69B40003500DB /* Frameworks */,
+				018AE62815F69B40003500DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JTCAdBaseViewControllerSample;
+			productName = JTCAdBaseViewControllerSample;
+			productReference = 018AE62A15F69B40003500DB /* JTCAdBaseViewControllerSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		018AE62115F69B40003500DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TNC;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "J-Tech Creations, Inc.";
+			};
+			buildConfigurationList = 018AE62415F69B40003500DB /* Build configuration list for PBXProject "JTCAdBaseViewControllerSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 018AE61F15F69B40003500DB;
+			productRefGroup = 018AE62B15F69B40003500DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				018AE62915F69B40003500DB /* JTCAdBaseViewControllerSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		018AE62815F69B40003500DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				018AE63915F69B40003500DB /* InfoPlist.strings in Resources */,
+				018AE64215F69B40003500DB /* MainStoryboard_iPhone.storyboard in Resources */,
+				018AE64515F69B40003500DB /* MainStoryboard_iPad.storyboard in Resources */,
+				018AE6EE15F69BFD003500DB /* README.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		018AE62615F69B40003500DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				018AE63B15F69B40003500DB /* main.m in Sources */,
+				018AE63F15F69B40003500DB /* TNCAppDelegate.m in Sources */,
+				018AE64815F69B40003500DB /* TNCViewController.m in Sources */,
+				018AE65115F69B62003500DB /* JTCAdBaseViewController.m in Sources */,
+				018AE71615F69E39003500DB /* TNCAdBaseViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		018AE63715F69B40003500DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				018AE63815F69B40003500DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		018AE64015F69B40003500DB /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				018AE64115F69B40003500DB /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		018AE64315F69B40003500DB /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				018AE64415F69B40003500DB /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		018AE64915F69B40003500DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		018AE64A15F69B40003500DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		018AE64C15F69B40003500DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample-Prefix.pch";
+				INFOPLIST_FILE = "JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../GoogleAdMobAdsSdkiOS-6.1.5/Add-ons/GoogleAnalyticsiOS_2.0beta2/Library\"",
+					"\"$(SRCROOT)/../GoogleAdMobAdsSdkiOS-6.1.5\"",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		018AE64D15F69B40003500DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample-Prefix.pch";
+				INFOPLIST_FILE = "JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../GoogleAdMobAdsSdkiOS-6.1.5/Add-ons/GoogleAnalyticsiOS_2.0beta2/Library\"",
+					"\"$(SRCROOT)/../GoogleAdMobAdsSdkiOS-6.1.5\"",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		018AE62415F69B40003500DB /* Build configuration list for PBXProject "JTCAdBaseViewControllerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				018AE64915F69B40003500DB /* Debug */,
+				018AE64A15F69B40003500DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		018AE64B15F69B40003500DB /* Build configuration list for PBXNativeTarget "JTCAdBaseViewControllerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				018AE64C15F69B40003500DB /* Debug */,
+				018AE64D15F69B40003500DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 018AE62115F69B40003500DB /* Project object */;
+}
