@@ -56,6 +56,9 @@ set if which ads (iAd or Admob) has priority (first show.)
 ### rotation
 just responds with shouldAutorotateToInterfaceOrientation in subclass of JTCAdBaseViewController
 
+![With Ads](https://dl.dropbox.com/u/1157820/JTCAdBaseViewController/withAds.png)
+![Without Ads](https://dl.dropbox.com/u/1157820/JTCAdBaseViewController/withoutAds.png)
+
 ## License
 The MIT License (MIT)
 Copyright (c) 2012 2012 Tomohisa Takaoka, J-Tech Creations, Inc.
