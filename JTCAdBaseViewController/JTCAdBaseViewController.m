@@ -177,6 +177,26 @@
     } else {
         _iAdBannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
     }
+    if (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPhone && _iAdBannerView.superview) {
+        CGSize newSize = [ADBannerView sizeFromBannerContentSizeIdentifier:_iAdBannerView.currentContentSizeIdentifier];
+        
+        float footerHeight,headerHeight;
+        if (_adLocation==JTCAdBaseViewAdLocationBottom) {
+            footerHeight = newSize.height;
+            headerHeight = 0;
+        }else{
+            footerHeight = 0;
+            headerHeight = newSize.height;
+        }
+        __weak JTCAdBaseViewController * wself = self;
+        [UIView animateWithDuration:duration animations:^{
+            wself.mainViewController.view.frame = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
+        } completion:^(BOOL finished) {
+            wself.mainViewController.view.frame = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
+        }];
+
+        
+    }
     if (_gAdBannerView && !_gAdBannerView.superview) {
         CGRect gadRect;
         GADAdSize gadSize;
