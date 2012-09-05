@@ -57,6 +57,30 @@
     [self.view addSubview:_mainViewController.view];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    [self addObserver:self forKeyPath:@"isAdRemoved" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self removeObserver:self forKeyPath:@"isAdRemoved"];
+}
+
+-(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    if (self.isAdRemoved) {
+        [self destroyAllView];
+        __weak JTCAdBaseViewController * wself = self;
+        [UIView animateWithDuration:0.25 animations:^{
+            wself.mainViewController.view.frame = self.view.bounds;
+        } completion:^(BOOL finished) {
+            wself.mainViewController.view.frame = self.view.bounds;
+        }];
+    }else{
+        [self createFirstView];
+    }
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -83,6 +107,9 @@
 -(void) createFirstView {
     if (_isAdRemoved) {
         [self destroyAllView];
+        return;
+    }
+    if (_iAdBannerView.superview || _gAdBannerView.superview) {
         return;
     }
     if (_adPriority==JTCAdBaseViewAdPriority_iAd) {
