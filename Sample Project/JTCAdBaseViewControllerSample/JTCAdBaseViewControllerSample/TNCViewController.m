@@ -19,8 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.view.layer.borderWidth = 10;
-    self.view.layer.borderColor = [UIColor blackColor].CGColor;
+    self.view.layer.borderWidth = 2;
+    self.view.layer.borderColor = [UIColor greenColor].CGColor;
 }
 
 - (void)viewDidUnload
