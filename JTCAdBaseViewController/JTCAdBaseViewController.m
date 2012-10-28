@@ -216,10 +216,15 @@
             headerHeight = newSize.height;
         }
         __weak JTCAdBaseViewController * wself = self;
+        
+        CGRect rectNew = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
+        
+        
+        
         [UIView animateWithDuration:duration animations:^{
-            wself.mainViewController.view.frame = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
+            wself.mainViewController.view.frame = rectNew;
         } completion:^(BOOL finished) {
-            wself.mainViewController.view.frame = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
+            wself.mainViewController.view.frame = rectNew;
         }];
 
         
@@ -240,6 +245,9 @@
             gadRect.origin = CGPointMake((self.view.bounds.size.width - gadRect.size.width) / 2, - gadRect.size.height);
         }
         _gAdBannerView.frame = gadRect;
+    }
+    if ([self.mainViewController respondsToSelector:@selector(adBaseViewController:willChangeFrameTo:duration:)]) {
+        [self.mainViewController adBaseViewController:self willChangeFrameTo:self.mainViewController.view.frame.size duration:duration];
     }
 }
 -(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
@@ -273,15 +281,24 @@
             headerHeight = banner.frame.size.height;
         }
         
+        
+        CGRect rectNew = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
+        
+        if ([wself.mainViewController respondsToSelector:@selector(adBaseViewController:willChangeFrameTo:duration:)]) {
+            [wself.mainViewController adBaseViewController:self willChangeFrameTo:rectNew.size duration:0.25];
+        }
+        
+
+        
         [UIView animateWithDuration:0.25 animations:^{
             if (_adLocation==JTCAdBaseViewAdLocationBottom) {
                 banner.frame = CGRectMake(wself.view.bounds.origin.x, CGRectGetMaxY(wself.view.bounds)-banner.frame.size.height, banner.frame.size.width, banner.frame.size.height);
             }else{
                 banner.frame = CGRectMake(wself.view.bounds.origin.x, CGRectGetMinY(wself.view.bounds), banner.frame.size.width, banner.frame.size.height);
             }
-            wself.mainViewController.view.frame = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
+            wself.mainViewController.view.frame = rectNew;
         } completion:^(BOOL finished) {
-            wself.mainViewController.view.frame = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
+            wself.mainViewController.view.frame = rectNew;
         }];
     }
     
@@ -294,10 +311,19 @@
     if (banner.superview) {
         [self destroy_iAdView];
         __weak JTCAdBaseViewController * wself = self;
+
+        
+        CGRect rectNew = self.view.bounds;
+        
+        if ([wself.mainViewController respondsToSelector:@selector(adBaseViewController:willChangeFrameTo:duration:)]) {
+            [wself.mainViewController adBaseViewController:self willChangeFrameTo:rectNew.size duration:0.25];
+        }
+        
+        
         [UIView animateWithDuration:0.25 animations:^{
-            wself.mainViewController.view.frame = self.view.bounds;
+            wself.mainViewController.view.frame = rectNew;
         } completion:^(BOOL finished) {
-            wself.mainViewController.view.frame = self.view.bounds;
+            wself.mainViewController.view.frame = rectNew;
         }];
     }
     [self destroy_iAdView];
@@ -344,16 +370,22 @@
             footerHeight = 0;
             headerHeight = view.frame.size.height;
         }
+
+        CGRect rectNew = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
         
+        if ([wself.mainViewController respondsToSelector:@selector(adBaseViewController:willChangeFrameTo:duration:)]) {
+            [wself.mainViewController adBaseViewController:self willChangeFrameTo:rectNew.size duration:0.25];
+        }
+
         [UIView animateWithDuration:0.25 animations:^{
             if (_adLocation==JTCAdBaseViewAdLocationBottom) {
                 view.frame = CGRectMake(view.frame.origin.x, CGRectGetMaxY(wself.view.bounds)-view.frame.size.height, view.frame.size.width, view.frame.size.height);
             }else{
                 view.frame = CGRectMake(view.frame.origin.x, CGRectGetMinY(wself.view.bounds), view.frame.size.width, view.frame.size.height);
             }
-            wself.mainViewController.view.frame = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
+            wself.mainViewController.view.frame = rectNew;
         } completion:^(BOOL finished) {
-            wself.mainViewController.view.frame = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
+            wself.mainViewController.view.frame = rectNew;
         }];
     }
 
@@ -367,10 +399,18 @@
     JTC_LOG_METHOD;
     if (view.superview) {
         __weak JTCAdBaseViewController * wself = self;
+        
+        
+        CGRect rectNew = self.view.bounds;
+        
+        if ([wself.mainViewController respondsToSelector:@selector(adBaseViewController:willChangeFrameTo:duration:)]) {
+            [wself.mainViewController adBaseViewController:self willChangeFrameTo:rectNew.size duration:0.25];
+        }
+        
         [UIView animateWithDuration:0.25 animations:^{
-            wself.mainViewController.view.frame = self.view.bounds;
+            wself.mainViewController.view.frame = rectNew;
         } completion:^(BOOL finished) {
-            wself.mainViewController.view.frame = self.view.bounds;
+            wself.mainViewController.view.frame = rectNew;
         }];
     }
     [self destroyGADView];
