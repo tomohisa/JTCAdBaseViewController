@@ -28,8 +28,7 @@
     self.mainViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainViewController"];
     self.adLocation = JTCAdBaseViewAdLocationBottom;
     // uncomment this and put your publisher ID to activate adMob
-    self.GADBannerViewPublisherID = @"a14e93dc3d720f9";
-//    self.GADBannerViewPublisherID = @"your publisher id";
+    self.GADBannerViewPublisherID = @"your publisher id";
     // if user purchase ad, you simply put self.isAdRemoved = YES; and Ads doesn't show.
     self.isAdRemoved = NO;
     // if you prefer admob first, put JTCAdBaseViewAdPriorityAdMob
