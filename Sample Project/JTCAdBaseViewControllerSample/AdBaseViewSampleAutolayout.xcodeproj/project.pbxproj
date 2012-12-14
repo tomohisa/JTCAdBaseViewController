@@ -50,6 +50,8 @@
 		01189D22167AD786000C00A8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018AE64015F69B40003500DB /* MainStoryboard_iPhone.storyboard */; };
 		01189D23167AD786000C00A8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018AE64315F69B40003500DB /* MainStoryboard_iPad.storyboard */; };
 		01189D24167AD786000C00A8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01189C0D167AB045000C00A8 /* Default-568h@2x.png */; };
+		01189D40167ADB76000C00A8 /* AutolayoutStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01189D3A167ADB5D000C00A8 /* AutolayoutStoryboard_iPad.storyboard */; };
+		01189D41167ADB7D000C00A8 /* AutolayoutStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01189D3C167ADB5D000C00A8 /* AutolayoutStoryboard_iPhone.storyboard */; };
 		018AE62F15F69B40003500DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE62E15F69B40003500DB /* UIKit.framework */; };
 		018AE63115F69B40003500DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE63015F69B40003500DB /* Foundation.framework */; };
 		018AE63315F69B40003500DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE63215F69B40003500DB /* CoreGraphics.framework */; };
@@ -97,16 +99,17 @@
 		01189CF1167ACD83000C00A8 /* ABXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABXViewController.m; sourceTree = "<group>"; };
 		01189CF4167ACDBB000C00A8 /* ABXAdBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABXAdBaseViewController.h; sourceTree = "<group>"; };
 		01189CF5167ACDBC000C00A8 /* ABXAdBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABXAdBaseViewController.m; sourceTree = "<group>"; };
-		01189D28167AD786000C00A8 /* JTCAdBaseViewControllerSample copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JTCAdBaseViewControllerSample copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01189D2A167AD786000C00A8 /* JTCAdBaseViewControllerSample copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "JTCAdBaseViewControllerSample copy-Info.plist"; path = "/Users/tomohisa/oss/JTCAdBaseViewController/Sample Project/JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample copy-Info.plist"; sourceTree = "<absolute>"; };
-		018AE62A15F69B40003500DB /* JTCAdBaseViewControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTCAdBaseViewControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01189D28167AD786000C00A8 /* AdBaseViewSampleAutolayout copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdBaseViewSampleAutolayout copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01189D3B167ADB5D000C00A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/AutolayoutStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		01189D3D167ADB5D000C00A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/AutolayoutStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		018AE62A15F69B40003500DB /* AdBaseViewSampleAutolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdBaseViewSampleAutolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018AE62E15F69B40003500DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		018AE63015F69B40003500DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		018AE63215F69B40003500DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		018AE63615F69B40003500DB /* JTCAdBaseViewControllerSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JTCAdBaseViewControllerSample-Info.plist"; sourceTree = "<group>"; };
+		018AE63615F69B40003500DB /* AdBaseViewSampleAutolayout-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AdBaseViewSampleAutolayout-Info.plist"; sourceTree = "<group>"; };
 		018AE63815F69B40003500DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		018AE63A15F69B40003500DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		018AE63C15F69B40003500DB /* JTCAdBaseViewControllerSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JTCAdBaseViewControllerSample-Prefix.pch"; sourceTree = "<group>"; };
+		018AE63C15F69B40003500DB /* AdBaseViewSampleAutolayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdBaseViewSampleAutolayout-Prefix.pch"; sourceTree = "<group>"; };
 		018AE63D15F69B40003500DB /* TNCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCAppDelegate.h; sourceTree = "<group>"; };
 		018AE63E15F69B40003500DB /* TNCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNCAppDelegate.m; sourceTree = "<group>"; };
 		018AE64115F69B40003500DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -248,16 +251,15 @@
 				01189CD2167ACC8D000C00A8 /* AdBaseViewSampleXIB */,
 				018AE62D15F69B40003500DB /* Frameworks */,
 				018AE62B15F69B40003500DB /* Products */,
-				01189D2A167AD786000C00A8 /* JTCAdBaseViewControllerSample copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		018AE62B15F69B40003500DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				018AE62A15F69B40003500DB /* JTCAdBaseViewControllerSample.app */,
+				018AE62A15F69B40003500DB /* AdBaseViewSampleAutolayout.app */,
 				01189CCD167ACC8D000C00A8 /* AdBaseViewSampleXIB.app */,
-				01189D28167AD786000C00A8 /* JTCAdBaseViewControllerSample copy.app */,
+				01189D28167AD786000C00A8 /* AdBaseViewSampleAutolayout copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,6 +277,8 @@
 		018AE63415F69B40003500DB /* JTCAdBaseViewControllerSample */ = {
 			isa = PBXGroup;
 			children = (
+				01189D3A167ADB5D000C00A8 /* AutolayoutStoryboard_iPad.storyboard */,
+				01189D3C167ADB5D000C00A8 /* AutolayoutStoryboard_iPhone.storyboard */,
 				01189C29167ABB78000C00A8 /* GoogleAdMobAdsSdkiOS-6.2.1 */,
 				018AE64E15F69B62003500DB /* JTCAdBaseViewController */,
 				018AE63D15F69B40003500DB /* TNCAppDelegate.h */,
@@ -293,10 +297,10 @@
 		018AE63515F69B40003500DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				018AE63615F69B40003500DB /* JTCAdBaseViewControllerSample-Info.plist */,
+				018AE63615F69B40003500DB /* AdBaseViewSampleAutolayout-Info.plist */,
 				018AE63715F69B40003500DB /* InfoPlist.strings */,
 				018AE63A15F69B40003500DB /* main.m */,
-				018AE63C15F69B40003500DB /* JTCAdBaseViewControllerSample-Prefix.pch */,
+				018AE63C15F69B40003500DB /* AdBaseViewSampleAutolayout-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -331,9 +335,9 @@
 			productReference = 01189CCD167ACC8D000C00A8 /* AdBaseViewSampleXIB.app */;
 			productType = "com.apple.product-type.application";
 		};
-		01189D0E167AD786000C00A8 /* JTCAdBaseViewControllerSample copy */ = {
+		01189D0E167AD786000C00A8 /* AdBaseViewSampleAutolayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01189D25167AD786000C00A8 /* Build configuration list for PBXNativeTarget "JTCAdBaseViewControllerSample copy" */;
+			buildConfigurationList = 01189D25167AD786000C00A8 /* Build configuration list for PBXNativeTarget "AdBaseViewSampleAutolayout" */;
 			buildPhases = (
 				01189D0F167AD786000C00A8 /* Sources */,
 				01189D15167AD786000C00A8 /* Frameworks */,
@@ -343,9 +347,9 @@
 			);
 			dependencies = (
 			);
-			name = "JTCAdBaseViewControllerSample copy";
+			name = AdBaseViewSampleAutolayout;
 			productName = JTCAdBaseViewControllerSample;
-			productReference = 01189D28167AD786000C00A8 /* JTCAdBaseViewControllerSample copy.app */;
+			productReference = 01189D28167AD786000C00A8 /* AdBaseViewSampleAutolayout copy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		018AE62915F69B40003500DB /* JTCAdBaseViewControllerSample */ = {
@@ -362,7 +366,7 @@
 			);
 			name = JTCAdBaseViewControllerSample;
 			productName = JTCAdBaseViewControllerSample;
-			productReference = 018AE62A15F69B40003500DB /* JTCAdBaseViewControllerSample.app */;
+			productReference = 018AE62A15F69B40003500DB /* AdBaseViewSampleAutolayout.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -375,7 +379,7 @@
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "J-Tech Creations, Inc.";
 			};
-			buildConfigurationList = 018AE62415F69B40003500DB /* Build configuration list for PBXProject "JTCAdBaseViewControllerSample" */;
+			buildConfigurationList = 018AE62415F69B40003500DB /* Build configuration list for PBXProject "AdBaseViewSampleAutolayout" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -389,7 +393,7 @@
 			targets = (
 				018AE62915F69B40003500DB /* JTCAdBaseViewControllerSample */,
 				01189CCC167ACC8D000C00A8 /* AdBaseViewSampleXIB */,
-				01189D0E167AD786000C00A8 /* JTCAdBaseViewControllerSample copy */,
+				01189D0E167AD786000C00A8 /* AdBaseViewSampleAutolayout */,
 			);
 		};
 /* End PBXProject section */
@@ -415,6 +419,8 @@
 				01189D22167AD786000C00A8 /* MainStoryboard_iPhone.storyboard in Resources */,
 				01189D23167AD786000C00A8 /* MainStoryboard_iPad.storyboard in Resources */,
 				01189D24167AD786000C00A8 /* Default-568h@2x.png in Resources */,
+				01189D40167ADB76000C00A8 /* AutolayoutStoryboard_iPad.storyboard in Resources */,
+				01189D41167ADB7D000C00A8 /* AutolayoutStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +491,22 @@
 				01189CE8167ACC8D000C00A8 /* en */,
 			);
 			name = ABXViewController.xib;
+			sourceTree = "<group>";
+		};
+		01189D3A167ADB5D000C00A8 /* AutolayoutStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01189D3B167ADB5D000C00A8 /* en */,
+			);
+			name = AutolayoutStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		01189D3C167ADB5D000C00A8 /* AutolayoutStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01189D3D167ADB5D000C00A8 /* en */,
+			);
+			name = AutolayoutStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		018AE63715F69B40003500DB /* InfoPlist.strings */ = {
@@ -559,15 +581,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample-Prefix.pch";
-				INFOPLIST_FILE = "JTCAdBaseViewControllerSample copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/AdBaseViewSampleAutolayout-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/JTCAdBaseViewControllerSample/AdBaseViewSampleAutolayout-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../GoogleAdMobAdsSdkiOS-6.2.1\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "JTCAdBaseViewControllerSample copy";
+				PRODUCT_NAME = "AdBaseViewSampleAutolayout copy";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -576,15 +598,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample-Prefix.pch";
-				INFOPLIST_FILE = "JTCAdBaseViewControllerSample copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/AdBaseViewSampleAutolayout-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/JTCAdBaseViewControllerSample/AdBaseViewSampleAutolayout-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../GoogleAdMobAdsSdkiOS-6.2.1\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "JTCAdBaseViewControllerSample copy";
+				PRODUCT_NAME = "AdBaseViewSampleAutolayout copy";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -644,15 +666,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample-Prefix.pch";
-				INFOPLIST_FILE = "JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample-Info.plist";
+				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/AdBaseViewSampleAutolayout-Prefix.pch";
+				INFOPLIST_FILE = "JTCAdBaseViewControllerSample/AdBaseViewSampleAutolayout-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../GoogleAdMobAdsSdkiOS-6.2.1\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AdBaseViewSampleAutolayout;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -661,15 +683,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample-Prefix.pch";
-				INFOPLIST_FILE = "JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample-Info.plist";
+				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/AdBaseViewSampleAutolayout-Prefix.pch";
+				INFOPLIST_FILE = "JTCAdBaseViewControllerSample/AdBaseViewSampleAutolayout-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../GoogleAdMobAdsSdkiOS-6.2.1\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AdBaseViewSampleAutolayout;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -686,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01189D25167AD786000C00A8 /* Build configuration list for PBXNativeTarget "JTCAdBaseViewControllerSample copy" */ = {
+		01189D25167AD786000C00A8 /* Build configuration list for PBXNativeTarget "AdBaseViewSampleAutolayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01189D26167AD786000C00A8 /* Debug */,
@@ -695,7 +717,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		018AE62415F69B40003500DB /* Build configuration list for PBXProject "JTCAdBaseViewControllerSample" */ = {
+		018AE62415F69B40003500DB /* Build configuration list for PBXProject "AdBaseViewSampleAutolayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				018AE64915F69B40003500DB /* Debug */,
