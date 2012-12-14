@@ -31,6 +31,25 @@
 		01189CFC167AD0C1000C00A8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE6F915F69C60003500DB /* SystemConfiguration.framework */; };
 		01189CFD167AD0D0000C00A8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01189CC7167ABD9E000C00A8 /* AdSupport.framework */; };
 		01189CFE167AD107000C00A8 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE6F315F69C45003500DB /* iAd.framework */; };
+		01189D10167AD786000C00A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AE63A15F69B40003500DB /* main.m */; };
+		01189D11167AD786000C00A8 /* TNCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AE63E15F69B40003500DB /* TNCAppDelegate.m */; };
+		01189D12167AD786000C00A8 /* TNCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AE64715F69B40003500DB /* TNCViewController.m */; };
+		01189D13167AD786000C00A8 /* JTCAdBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AE65015F69B62003500DB /* JTCAdBaseViewController.m */; };
+		01189D14167AD786000C00A8 /* TNCAdBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AE71515F69E39003500DB /* TNCAdBaseViewController.m */; };
+		01189D16167AD786000C00A8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01189CC7167ABD9E000C00A8 /* AdSupport.framework */; };
+		01189D17167AD786000C00A8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01189CC5167ABBCF000C00A8 /* StoreKit.framework */; };
+		01189D18167AD786000C00A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE63215F69B40003500DB /* CoreGraphics.framework */; };
+		01189D19167AD786000C00A8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE6F915F69C60003500DB /* SystemConfiguration.framework */; };
+		01189D1A167AD786000C00A8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE6F715F69C57003500DB /* MessageUI.framework */; };
+		01189D1B167AD786000C00A8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE6F515F69C4C003500DB /* AudioToolbox.framework */; };
+		01189D1C167AD786000C00A8 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE6F315F69C45003500DB /* iAd.framework */; };
+		01189D1D167AD786000C00A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE62E15F69B40003500DB /* UIKit.framework */; };
+		01189D1E167AD786000C00A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE63015F69B40003500DB /* Foundation.framework */; };
+		01189D1F167AD786000C00A8 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01189C8B167ABB78000C00A8 /* libGoogleAdMobAds.a */; };
+		01189D21167AD786000C00A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 018AE63715F69B40003500DB /* InfoPlist.strings */; };
+		01189D22167AD786000C00A8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018AE64015F69B40003500DB /* MainStoryboard_iPhone.storyboard */; };
+		01189D23167AD786000C00A8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018AE64315F69B40003500DB /* MainStoryboard_iPad.storyboard */; };
+		01189D24167AD786000C00A8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01189C0D167AB045000C00A8 /* Default-568h@2x.png */; };
 		018AE62F15F69B40003500DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE62E15F69B40003500DB /* UIKit.framework */; };
 		018AE63115F69B40003500DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE63015F69B40003500DB /* Foundation.framework */; };
 		018AE63315F69B40003500DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE63215F69B40003500DB /* CoreGraphics.framework */; };
@@ -78,6 +97,8 @@
 		01189CF1167ACD83000C00A8 /* ABXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABXViewController.m; sourceTree = "<group>"; };
 		01189CF4167ACDBB000C00A8 /* ABXAdBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABXAdBaseViewController.h; sourceTree = "<group>"; };
 		01189CF5167ACDBC000C00A8 /* ABXAdBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABXAdBaseViewController.m; sourceTree = "<group>"; };
+		01189D28167AD786000C00A8 /* JTCAdBaseViewControllerSample copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JTCAdBaseViewControllerSample copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01189D2A167AD786000C00A8 /* JTCAdBaseViewControllerSample copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "JTCAdBaseViewControllerSample copy-Info.plist"; path = "/Users/tomohisa/oss/JTCAdBaseViewController/Sample Project/JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample copy-Info.plist"; sourceTree = "<absolute>"; };
 		018AE62A15F69B40003500DB /* JTCAdBaseViewControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTCAdBaseViewControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018AE62E15F69B40003500DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		018AE63015F69B40003500DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +138,23 @@
 				01189CCF167ACC8D000C00A8 /* UIKit.framework in Frameworks */,
 				01189CD0167ACC8D000C00A8 /* Foundation.framework in Frameworks */,
 				01189CF8167AD005000C00A8 /* libGoogleAdMobAds.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01189D15167AD786000C00A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01189D16167AD786000C00A8 /* AdSupport.framework in Frameworks */,
+				01189D17167AD786000C00A8 /* StoreKit.framework in Frameworks */,
+				01189D18167AD786000C00A8 /* CoreGraphics.framework in Frameworks */,
+				01189D19167AD786000C00A8 /* SystemConfiguration.framework in Frameworks */,
+				01189D1A167AD786000C00A8 /* MessageUI.framework in Frameworks */,
+				01189D1B167AD786000C00A8 /* AudioToolbox.framework in Frameworks */,
+				01189D1C167AD786000C00A8 /* iAd.framework in Frameworks */,
+				01189D1D167AD786000C00A8 /* UIKit.framework in Frameworks */,
+				01189D1E167AD786000C00A8 /* Foundation.framework in Frameworks */,
+				01189D1F167AD786000C00A8 /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +248,7 @@
 				01189CD2167ACC8D000C00A8 /* AdBaseViewSampleXIB */,
 				018AE62D15F69B40003500DB /* Frameworks */,
 				018AE62B15F69B40003500DB /* Products */,
+				01189D2A167AD786000C00A8 /* JTCAdBaseViewControllerSample copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +257,7 @@
 			children = (
 				018AE62A15F69B40003500DB /* JTCAdBaseViewControllerSample.app */,
 				01189CCD167ACC8D000C00A8 /* AdBaseViewSampleXIB.app */,
+				01189D28167AD786000C00A8 /* JTCAdBaseViewControllerSample copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,6 +331,23 @@
 			productReference = 01189CCD167ACC8D000C00A8 /* AdBaseViewSampleXIB.app */;
 			productType = "com.apple.product-type.application";
 		};
+		01189D0E167AD786000C00A8 /* JTCAdBaseViewControllerSample copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01189D25167AD786000C00A8 /* Build configuration list for PBXNativeTarget "JTCAdBaseViewControllerSample copy" */;
+			buildPhases = (
+				01189D0F167AD786000C00A8 /* Sources */,
+				01189D15167AD786000C00A8 /* Frameworks */,
+				01189D20167AD786000C00A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JTCAdBaseViewControllerSample copy";
+			productName = JTCAdBaseViewControllerSample;
+			productReference = 01189D28167AD786000C00A8 /* JTCAdBaseViewControllerSample copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 		018AE62915F69B40003500DB /* JTCAdBaseViewControllerSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 018AE64B15F69B40003500DB /* Build configuration list for PBXNativeTarget "JTCAdBaseViewControllerSample" */;
@@ -332,6 +389,7 @@
 			targets = (
 				018AE62915F69B40003500DB /* JTCAdBaseViewControllerSample */,
 				01189CCC167ACC8D000C00A8 /* AdBaseViewSampleXIB */,
+				01189D0E167AD786000C00A8 /* JTCAdBaseViewControllerSample copy */,
 			);
 		};
 /* End PBXProject section */
@@ -346,6 +404,17 @@
 				01189CE1167ACC8D000C00A8 /* Default@2x.png in Resources */,
 				01189CE3167ACC8D000C00A8 /* Default-568h@2x.png in Resources */,
 				01189CE9167ACC8D000C00A8 /* ABXViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01189D20167AD786000C00A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01189D21167AD786000C00A8 /* InfoPlist.strings in Resources */,
+				01189D22167AD786000C00A8 /* MainStoryboard_iPhone.storyboard in Resources */,
+				01189D23167AD786000C00A8 /* MainStoryboard_iPad.storyboard in Resources */,
+				01189D24167AD786000C00A8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +441,18 @@
 				01189CF3167ACD83000C00A8 /* ABXViewController.m in Sources */,
 				01189CF6167ACDBC000C00A8 /* ABXAdBaseViewController.m in Sources */,
 				01189CF7167ACFFA000C00A8 /* JTCAdBaseViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01189D0F167AD786000C00A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01189D10167AD786000C00A8 /* main.m in Sources */,
+				01189D11167AD786000C00A8 /* TNCAppDelegate.m in Sources */,
+				01189D12167AD786000C00A8 /* TNCViewController.m in Sources */,
+				01189D13167AD786000C00A8 /* JTCAdBaseViewController.m in Sources */,
+				01189D14167AD786000C00A8 /* TNCAdBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +555,40 @@
 			};
 			name = Release;
 		};
+		01189D26167AD786000C00A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample-Prefix.pch";
+				INFOPLIST_FILE = "JTCAdBaseViewControllerSample copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../GoogleAdMobAdsSdkiOS-6.2.1\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "JTCAdBaseViewControllerSample copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		01189D27167AD786000C00A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/JTCAdBaseViewControllerSample-Prefix.pch";
+				INFOPLIST_FILE = "JTCAdBaseViewControllerSample copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../GoogleAdMobAdsSdkiOS-6.2.1\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "JTCAdBaseViewControllerSample copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		018AE64915F69B40003500DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -569,6 +684,16 @@
 				01189CEC167ACC8D000C00A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01189D25167AD786000C00A8 /* Build configuration list for PBXNativeTarget "JTCAdBaseViewControllerSample copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01189D26167AD786000C00A8 /* Debug */,
+				01189D27167AD786000C00A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		018AE62415F69B40003500DB /* Build configuration list for PBXProject "JTCAdBaseViewControllerSample" */ = {
 			isa = XCConfigurationList;
