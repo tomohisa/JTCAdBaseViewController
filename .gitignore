@@ -1,5 +1,6 @@
 # Xcode
-build/*
+.DS_Store
+build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -13,3 +14,7 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+DerivedData
+.idea/
+.com.apple.timemachine.supported
+DB/.com.apple.timemachine.supported
