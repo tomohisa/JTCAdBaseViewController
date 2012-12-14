@@ -52,6 +52,9 @@
 		01189D24167AD786000C00A8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01189C0D167AB045000C00A8 /* Default-568h@2x.png */; };
 		01189D40167ADB76000C00A8 /* AutolayoutStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01189D3A167ADB5D000C00A8 /* AutolayoutStoryboard_iPad.storyboard */; };
 		01189D41167ADB7D000C00A8 /* AutolayoutStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01189D3C167ADB5D000C00A8 /* AutolayoutStoryboard_iPhone.storyboard */; };
+		012737CA167AEADD0085F83B /* TNCTableAdBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012737C7167AEAD70085F83B /* TNCTableAdBaseViewController.m */; };
+		012737CB167AF0B60085F83B /* TNCTableAdBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012737C7167AEAD70085F83B /* TNCTableAdBaseViewController.m */; };
+		012737CD167AF2350085F83B /* AdBaseViewSampleAutolayout-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 012737CC167AF2350085F83B /* AdBaseViewSampleAutolayout-Info.plist */; };
 		018AE62F15F69B40003500DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE62E15F69B40003500DB /* UIKit.framework */; };
 		018AE63115F69B40003500DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE63015F69B40003500DB /* Foundation.framework */; };
 		018AE63315F69B40003500DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 018AE63215F69B40003500DB /* CoreGraphics.framework */; };
@@ -102,11 +105,14 @@
 		01189D28167AD786000C00A8 /* AdBaseViewSampleAutolayout copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdBaseViewSampleAutolayout copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01189D3B167ADB5D000C00A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/AutolayoutStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		01189D3D167ADB5D000C00A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/AutolayoutStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		012737C6167AEAD70085F83B /* TNCTableAdBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCTableAdBaseViewController.h; sourceTree = "<group>"; };
+		012737C7167AEAD70085F83B /* TNCTableAdBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCTableAdBaseViewController.m; sourceTree = "<group>"; };
+		012737CC167AF2350085F83B /* AdBaseViewSampleAutolayout-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AdBaseViewSampleAutolayout-Info.plist"; sourceTree = "<group>"; };
 		018AE62A15F69B40003500DB /* AdBaseViewSampleAutolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdBaseViewSampleAutolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018AE62E15F69B40003500DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		018AE63015F69B40003500DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		018AE63215F69B40003500DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		018AE63615F69B40003500DB /* AdBaseViewSampleAutolayout-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AdBaseViewSampleAutolayout-Info.plist"; sourceTree = "<group>"; };
+		018AE63615F69B40003500DB /* AdBaseViewSampleRegular-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AdBaseViewSampleRegular-Info.plist"; sourceTree = "<group>"; };
 		018AE63815F69B40003500DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		018AE63A15F69B40003500DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		018AE63C15F69B40003500DB /* AdBaseViewSampleAutolayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdBaseViewSampleAutolayout-Prefix.pch"; sourceTree = "<group>"; };
@@ -290,6 +296,8 @@
 				018AE63515F69B40003500DB /* Supporting Files */,
 				018AE71415F69E39003500DB /* TNCAdBaseViewController.h */,
 				018AE71515F69E39003500DB /* TNCAdBaseViewController.m */,
+				012737C6167AEAD70085F83B /* TNCTableAdBaseViewController.h */,
+				012737C7167AEAD70085F83B /* TNCTableAdBaseViewController.m */,
 			);
 			path = JTCAdBaseViewControllerSample;
 			sourceTree = "<group>";
@@ -297,7 +305,8 @@
 		018AE63515F69B40003500DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				018AE63615F69B40003500DB /* AdBaseViewSampleAutolayout-Info.plist */,
+				012737CC167AF2350085F83B /* AdBaseViewSampleAutolayout-Info.plist */,
+				018AE63615F69B40003500DB /* AdBaseViewSampleRegular-Info.plist */,
 				018AE63715F69B40003500DB /* InfoPlist.strings */,
 				018AE63A15F69B40003500DB /* main.m */,
 				018AE63C15F69B40003500DB /* AdBaseViewSampleAutolayout-Prefix.pch */,
@@ -432,6 +441,7 @@
 				018AE64215F69B40003500DB /* MainStoryboard_iPhone.storyboard in Resources */,
 				018AE64515F69B40003500DB /* MainStoryboard_iPad.storyboard in Resources */,
 				01189C0E167AB045000C00A8 /* Default-568h@2x.png in Resources */,
+				012737CD167AF2350085F83B /* AdBaseViewSampleAutolayout-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +469,7 @@
 				01189D12167AD786000C00A8 /* TNCViewController.m in Sources */,
 				01189D13167AD786000C00A8 /* JTCAdBaseViewController.m in Sources */,
 				01189D14167AD786000C00A8 /* TNCAdBaseViewController.m in Sources */,
+				012737CA167AEADD0085F83B /* TNCTableAdBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +482,7 @@
 				018AE64815F69B40003500DB /* TNCViewController.m in Sources */,
 				018AE65115F69B62003500DB /* JTCAdBaseViewController.m in Sources */,
 				018AE71615F69E39003500DB /* TNCAdBaseViewController.m in Sources */,
+				012737CB167AF0B60085F83B /* TNCTableAdBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,7 +679,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/AdBaseViewSampleAutolayout-Prefix.pch";
-				INFOPLIST_FILE = "JTCAdBaseViewControllerSample/AdBaseViewSampleAutolayout-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/JTCAdBaseViewControllerSample/AdBaseViewSampleRegular-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -684,7 +696,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JTCAdBaseViewControllerSample/AdBaseViewSampleAutolayout-Prefix.pch";
-				INFOPLIST_FILE = "JTCAdBaseViewControllerSample/AdBaseViewSampleAutolayout-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/JTCAdBaseViewControllerSample/AdBaseViewSampleRegular-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
