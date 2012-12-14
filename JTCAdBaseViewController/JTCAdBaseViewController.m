@@ -150,7 +150,10 @@
     // Fortunately all we need to do is ask the banner for a size that fits into the layout area we are using.
     // At this point in this method contentFrame=self.view.bounds, so we'll use that size for the layout.
     _iAdBannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
-    iAdRect.size = [_iAdBannerView sizeThatFits:self.view.frame.size];
+    iAdRect.size = [_iAdBannerView sizeThatFits:self.view.bounds.size];
+#ifdef DEBUG
+    NSLog(@"ad size %@, bounds%@, frame%@", NSStringFromCGRect(iAdRect),NSStringFromCGRect(self.view.bounds),NSStringFromCGRect(self.view.frame));
+#endif
     if (_adLocation==JTCAdBaseViewAdLocationBottom) {
         iAdRect.origin = CGPointMake(0, CGRectGetMaxY(self.view.bounds));
     }else{
