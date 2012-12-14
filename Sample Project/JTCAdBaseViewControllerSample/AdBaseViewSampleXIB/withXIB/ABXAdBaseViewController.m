@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad
 {
-    self.mainViewController = [[ABXViewController alloc] initWithNibName:@"ABXViewController" bundle:nil];;
+    self.mainViewController = [[ABXViewController alloc] initWithNibName:@"ABXViewController" bundle:nil];
     self.adLocation = JTCAdBaseViewAdLocationBottom;
     // uncomment this and put your publisher ID to activate adMob
     self.GADBannerViewPublisherID = @"your publisher id";

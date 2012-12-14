@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JTCAdBaseViewController.h"
 
-@interface ABXViewController : UIViewController
+@interface ABXViewController : UIViewController <JTCAdBaseViewControllerDelegate>
 
 @end
