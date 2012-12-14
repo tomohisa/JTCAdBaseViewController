@@ -34,4 +34,17 @@
         return YES;
 }
 
+// return this to specify which orientation to support.
+- (NSUInteger) supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+
+
+// return this to specify which orientation were to preffered at start
+// notice: this won't call for rootview controller.
+// specify at info.plist for launch Orientation.
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationLandscapeLeft;
+}
+
 @end
