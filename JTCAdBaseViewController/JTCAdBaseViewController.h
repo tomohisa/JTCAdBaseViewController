@@ -25,9 +25,16 @@ typedef enum  {
     JTCAdBaseViewAdPriority_iAd = 0,
     JTCAdBaseViewAdPriorityAdMob = 1,
 } JTCAdBaseViewAdPriority;
+@class JTCAdBaseViewController;
+@protocol JTCAdBaseViewControllerDelegate <NSObject>
+
+@optional
+-(void) adBaseViewController:(JTCAdBaseViewController*) adBaseViewController willChangeFrameTo:(CGSize)size duration:(float)duration;
+@end
+
 
 @interface JTCAdBaseViewController : UIViewController
-@property UIViewController * mainViewController;
+@property UIViewController<JTCAdBaseViewControllerDelegate> * mainViewController;
 @property BOOL isAdRemoved;
 @property JTCAdBaseViewAdLocation adLocation;
 @property JTCAdBaseViewAdPriority adPriority;

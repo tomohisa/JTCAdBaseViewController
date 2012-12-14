@@ -8,6 +8,13 @@ This ViewController add automatically add iAD and ADMob to the screen and with A
 2. in viewDidLoad, add your viewController as mainViewController 
 3. Setup Options.
 
+## What's new
+12/13/2012 iOS6 Support. to respons rotation, just respond 
+- (NSUInteger) supportedOrientaions 
+- (UIOrientation) prefferedOrientaion
+
+12/13/2012 XIB sample is in the sample project.
+
 ``` objective-c
 #import "JTCAdBaseViewController.h"
 @interface TNCAdBaseViewController : JTCAdBaseViewController
