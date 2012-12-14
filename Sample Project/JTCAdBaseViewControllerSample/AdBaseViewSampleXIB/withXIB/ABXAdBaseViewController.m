@@ -30,7 +30,6 @@
     self.adLocation = JTCAdBaseViewAdLocationBottom;
     // uncomment this and put your publisher ID to activate adMob
     self.GADBannerViewPublisherID = @"your publisher id";
-    self.GADBannerViewPublisherID = @"a14e93dc3d720f9";
     // if user purchase ad, you simply put self.isAdRemoved = YES; and Ads doesn't show.
     self.isAdRemoved = NO;
     // if you prefer admob first, put JTCAdBaseViewAdPriorityAdMob
