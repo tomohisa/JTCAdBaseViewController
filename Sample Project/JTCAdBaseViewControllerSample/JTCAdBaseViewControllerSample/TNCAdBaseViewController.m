@@ -27,7 +27,8 @@
 {
     self.mainViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainViewController"];
     self.adLocation = JTCAdBaseViewAdLocationBottom;
-//    self.GADBannerViewPublisherID = @"put your Publisher ID";
+    // uncomment this and put your publisher ID to activate adMob
+    self.GADBannerViewPublisherID = @"your publisher id";
     // if user purchase ad, you simply put self.isAdRemoved = YES; and Ads doesn't show.
     self.isAdRemoved = NO;
     // if you prefer admob first, put JTCAdBaseViewAdPriorityAdMob
@@ -41,11 +42,6 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (YES);
 }
 
 @end

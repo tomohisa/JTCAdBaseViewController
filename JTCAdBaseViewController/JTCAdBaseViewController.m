@@ -35,6 +35,7 @@
 @property ADBannerView * iAdBannerView;
 @property GADBannerView * gAdBannerView;
 @property (readonly) float adHeight;
+@property dispatch_once_t onceToken;
 @end
 
 @implementation JTCAdBaseViewController
@@ -51,15 +52,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self createFirstView];
-    [self addChildViewController:_mainViewController];
-    _mainViewController.view.frame = self.view.bounds;
-    [self.view addSubview:_mainViewController.view];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     [self addObserver:self forKeyPath:@"isAdRemoved" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+-(void)viewDidLayoutSubviews {
+    // only first time of the instance
+    dispatch_once(&_onceToken, ^{
+        [self createFirstView];
+        [self addChildViewController:_mainViewController];
+        _mainViewController.view.frame = self.view.bounds;
+        [self.view addSubview:_mainViewController.view];
+    });
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
@@ -87,10 +94,6 @@
     // Release any retained subviews of the main view.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
 
 -(float) adHeight {
     if (_isAdRemoved) {
@@ -126,6 +129,11 @@
         return;
     }
     CGRect iAdRect;
+    
+    
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
+    // If configured to support iOS <6.0, then we need to set the currentContentSizeIdentifier in order to resize the banner properly.
+    // This continues to work on iOS 6.0, so we won't need to do anything further to resize the banner.
     if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
         iAdRect.size = [ADBannerView sizeFromBannerContentSizeIdentifier:ADBannerContentSizeIdentifierPortrait];
     }else{
@@ -137,6 +145,20 @@
         iAdRect.origin = CGPointMake(0, - iAdRect.size.height);
     }
     _iAdBannerView = [[ADBannerView alloc] initWithFrame:iAdRect];
+#else
+    // If configured to support iOS >= 6.0 only, then we want to avoid currentContentSizeIdentifier as it is deprecated.
+    // Fortunately all we need to do is ask the banner for a size that fits into the layout area we are using.
+    // At this point in this method contentFrame=self.view.bounds, so we'll use that size for the layout.
+    _iAdBannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+    iAdRect.size = [_iAdBannerView sizeThatFits:self.view.frame.size];
+    if (_adLocation==JTCAdBaseViewAdLocationBottom) {
+        iAdRect.origin = CGPointMake(0, CGRectGetMaxY(self.view.bounds));
+    }else{
+        iAdRect.origin = CGPointMake(0, - iAdRect.size.height);
+    }
+    _iAdBannerView.frame = iAdRect;
+#endif
+    
     if (_adLocation==JTCAdBaseViewAdLocationBottom) {
         _iAdBannerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin;
     }else{
@@ -199,13 +221,33 @@
 #pragma mark - rotation
 - (void) willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     JTC_LOG_METHOD;
-    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)){
-        _iAdBannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
-    } else {
-        _iAdBannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
-    }
+    
+
     if (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPhone && _iAdBannerView.superview) {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
+        // If configured to support iOS <6.0, then we need to set the currentContentSizeIdentifier in order to resize the banner properly.
+        // This continues to work on iOS 6.0, so we won't need to do anything further to resize the banner.
+        if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)){
+            _iAdBannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
+        } else {
+            _iAdBannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
+        }
         CGSize newSize = [ADBannerView sizeFromBannerContentSizeIdentifier:_iAdBannerView.currentContentSizeIdentifier];
+#else
+        // If configured to support iOS >= 6.0 only, then we want to avoid currentContentSizeIdentifier as it is deprecated.
+        // Fortunately all we need to do is ask the banner for a size that fits into the layout area we are using.
+        // At this point in this method contentFrame=self.view.bounds, so we'll use that size for the layout.
+        CGSize sizeView = self.view.frame.size;
+        float longer = (sizeView.height>sizeView.width) ? sizeView.height : sizeView.width;
+        float shorter = (sizeView.height<sizeView.width) ? sizeView.height : sizeView.width;
+        
+        CGSize newSize;
+        if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)){
+            newSize = [_iAdBannerView sizeThatFits:CGSizeMake(longer, shorter)];
+        } else {
+            newSize = [_iAdBannerView sizeThatFits:CGSizeMake(shorter, longer)];
+        }
+#endif
         
         float footerHeight,headerHeight;
         if (_adLocation==JTCAdBaseViewAdLocationBottom) {
@@ -231,12 +273,9 @@
     }
     if (_gAdBannerView && !_gAdBannerView.superview) {
         CGRect gadRect;
-        GADAdSize gadSize;
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-            gadSize = kGADAdSizeFullBanner;
             gadRect.size = kGADAdSizeFullBanner.size;
         }else{
-            gadSize = kGADAdSizeBanner;
             gadRect.size = kGADAdSizeBanner.size;
         }
         if (_adLocation==JTCAdBaseViewAdLocationBottom) {
@@ -252,6 +291,19 @@
 }
 -(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     JTC_LOG_METHOD;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
+
+-(NSUInteger) supportedInterfaceOrientations {
+    return [self.mainViewController supportedInterfaceOrientations];
+}
+
+-(UIInterfaceOrientation) preferredInterfaceOrientationForPresentation {
+    return [self.mainViewController preferredInterfaceOrientationForPresentation];
 }
 
 
@@ -308,6 +360,9 @@
 // The ADError enum lists the possible error codes.
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
     JTC_LOG_METHOD;
+#ifdef DEBUG
+    NSLog(@"Error[%@]",error.localizedDescription);
+#endif
     if (banner.superview) {
         [self destroy_iAdView];
         __weak JTCAdBaseViewController * wself = self;
