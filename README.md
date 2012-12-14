@@ -15,6 +15,10 @@ This ViewController add automatically add iAD and ADMob to the screen and with A
 
 12/13/2012 XIB sample is in the sample project.
 
+12/13/2012 Tested Autolayout
+
+12/13/2012 Navigation Controller sample made.
+
 ``` objective-c
 #import "JTCAdBaseViewController.h"
 @interface TNCAdBaseViewController : JTCAdBaseViewController
