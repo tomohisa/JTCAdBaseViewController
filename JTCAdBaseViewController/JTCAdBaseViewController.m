@@ -262,7 +262,9 @@
         __weak JTCAdBaseViewController * wself = self;
         
         CGRect rectNew = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
+#ifdef DEBUG
         NSLog(@"iAd rectNew size %@", NSStringFromCGRect(rectNew));
+#endif
         
         [UIView animateWithDuration:duration animations:^{
             wself.mainViewController.view.frame = rectNew;
@@ -295,7 +297,9 @@
         __weak JTCAdBaseViewController * wself = self;
         
         CGRect rectNew = CGRectMake(0, headerHeight, wself.view.bounds.size.width, wself.view.bounds.size.height - footerHeight - headerHeight);
+#ifdef DEBUG
         NSLog(@"gAd rectNew size %@", NSStringFromCGRect(rectNew));
+#endif
         
         [UIView animateWithDuration:duration animations:^{
             wself.mainViewController.view.frame = rectNew;
