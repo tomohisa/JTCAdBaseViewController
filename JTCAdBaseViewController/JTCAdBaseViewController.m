@@ -303,6 +303,15 @@
             wself.mainViewController.view.frame = rectNew;
         }];
     }
+    if (_isAdRemoved) {
+        __weak JTCAdBaseViewController * wself = self;
+        CGRect rectNew = CGRectMake(0, 0, wself.view.bounds.size.width, wself.view.bounds.size.height);
+        [UIView animateWithDuration:duration animations:^{
+            wself.mainViewController.view.frame = rectNew;
+        } completion:^(BOOL finished) {
+            wself.mainViewController.view.frame = rectNew;
+        }];
+    }
     if ([self.mainViewController respondsToSelector:@selector(adBaseViewController:willChangeFrameTo:duration:)]) {
         [self.mainViewController adBaseViewController:self willChangeFrameTo:self.mainViewController.view.frame.size duration:duration];
     }
