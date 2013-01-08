@@ -225,7 +225,6 @@
 - (void) willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     JTC_LOG_METHOD;
     
-    //if (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPhone && _iAdBannerView.superview) { // remove ipad
     if (_iAdBannerView.superview) {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
         // If configured to support iOS <6.0, then we need to set the currentContentSizeIdentifier in order to resize the banner properly.
@@ -271,7 +270,6 @@
             wself.mainViewController.view.frame = rectNew;
         }];
     }
-    //if (_gAdBannerView && !_gAdBannerView.superview) { // original - remove the !
     if (_gAdBannerView && _gAdBannerView.superview) {
         CGRect gadRect;
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -280,15 +278,12 @@
             gadRect.size = kGADAdSizeBanner.size;
         }
         if (_adLocation==JTCAdBaseViewAdLocationBottom) {
-            //gadRect.origin = CGPointMake((self.view.bounds.size.width - gadRect.size.width) / 2, CGRectGetMaxY(self.view.bounds)); // add -gad height
             gadRect.origin = CGPointMake((self.view.bounds.size.width - gadRect.size.width) / 2, CGRectGetMaxY(self.view.bounds) - gadRect.size.height);
         }else{
-            //gadRect.origin = CGPointMake((self.view.bounds.size.width - gadRect.size.width) / 2, - gadRect.size.height); // top is 0 whatever, - height just sends ad above screen
             gadRect.origin = CGPointMake((self.view.bounds.size.width - gadRect.size.width) / 2, 0);
         }
         _gAdBannerView.frame = gadRect;
         
-        // test to fix rotation when google ad on screen
         float footerHeight,headerHeight;
         if (_adLocation==JTCAdBaseViewAdLocationBottom) {
             footerHeight = gadRect.size.height;
@@ -307,7 +302,6 @@
         } completion:^(BOOL finished) {
             wself.mainViewController.view.frame = rectNew;
         }];
-        // end test - remove if not making any odds
     }
     if ([self.mainViewController respondsToSelector:@selector(adBaseViewController:willChangeFrameTo:duration:)]) {
         [self.mainViewController adBaseViewController:self willChangeFrameTo:self.mainViewController.view.frame.size duration:duration];
